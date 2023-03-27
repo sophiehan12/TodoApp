@@ -2,11 +2,15 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.ResponseDTO;
 import com.example.demo.dto.TestRequestBodyDTO;
+import com.example.demo.dto.TodoDTO;
+import com.example.demo.model.TodoEntity;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.springframework.web.method.HandlerTypePredicate.builder;
 
@@ -58,4 +62,5 @@ public class TestController {
         //return ResponseEntity.ok().body(response);
         return ResponseEntity.badRequest().body(response);
     }
+
 }

@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface TodoRepository extends JpaRepository<TodoEntity, String> {
+    //@Query(value = "select * from Todo t where t.userId =1?",nativeQuery = true ) //안쓰면 자동 생성.
     List<TodoEntity> findByUserId(String userId);
 }
